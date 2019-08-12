@@ -2,7 +2,8 @@ package ru.aplana.hackathon.model;
 
 import lombok.Data;
 import ru.aplana.hackathon.validation.WmiConstraint;
-import ru.aplana.hackathon.validation.YearConstraint;
+
+import javax.validation.constraints.Min;
 
 @Data
 public class VinRequest {
@@ -10,7 +11,7 @@ public class VinRequest {
     @WmiConstraint
     private String wmi;
 
-    @YearConstraint
+    @Min(1900)
     private Integer year;
 
 }
