@@ -26,19 +26,37 @@ mvn clean install spring-boot:run
 Развернуть сервис на нестандартном порту можно командой:
 java -jar vingen.jar --server.port=8888
 
+
 Использование
 -------------
 
-service home page:
-http://localhost:8081
+Домашняя страница сервиса: http://localhost:8081
 
-service usage:
-http://localhost:8081/create
+Генерация VIN без параметров: [GET] http://localhost:8081/create
 
-db usage:
+Генерация VIN c параметрами: [POST] http://localhost:8081/create
+
+в заголовке надо передать: Content-Type = application/json
+
+в теле запроса надо передать: {	"year": 2015, "wmi": "ABC" }
+
+year - год выпуска (должен быть больше 1900)
+
+wmi - всемирный индекс изготовителя (должен содержать 3 знака, должен содержать только разрешенные символы)
+
+допускается пропускать параметры
+
+
+Настройка/просмотр БД
+-------------
 http://localhost:8081/h2
+
 Setting Name: Generic H2 (Embedded)
+
 Driver Class: org.h2.Driver
+
 JDBC URL: jdbc:h2:~/vingen
+
 User Name: sa
+
 Password:
