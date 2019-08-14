@@ -18,7 +18,7 @@ mvn clean install spring-boot:run
 Установка без среды разработки
 ------------------------------
 
-1. Установить Java Runtime Environment не менеее версии 8 (если не установлено) https://java.com/ru/download/
+1. Установить Java Runtime Environment не менее версии 8 (если не установлено) https://java.com/ru/download/
 2. Скачать файл vingen.jar отсюда: https://github.com/nikdildin/hackathon-aplana-2019-qualifying/blob/master/release/vingen.jar (кнопка Download)
 3. Запустить его кликнув 2 раза мышкой, или командой: java -jar vingen.jar
 4. При запросе брандмауэра дать разрешение
