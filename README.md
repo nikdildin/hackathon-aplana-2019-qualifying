@@ -55,7 +55,7 @@ Setting Name: Generic H2 (Embedded)
 
 Driver Class: org.h2.Driver
 
-JDBC URL: jdbc:h2:~/vingen
+JDBC URL: jdbc:h2:~/test
 
 User Name: sa
 
