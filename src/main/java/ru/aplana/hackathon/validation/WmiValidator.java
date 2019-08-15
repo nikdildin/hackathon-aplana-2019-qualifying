@@ -13,10 +13,8 @@ public class WmiValidator implements ConstraintValidator<WmiConstraint, String> 
             if (contactField.length() != 3) {
                 return false;
             }
-            for (char s : contactField.toUpperCase().toCharArray()) {
-                if (!String.valueOf(ConstantsProvider.SYMBOLS).contains(String.valueOf(s))) {
-                    return false;
-                }
+            if (!ConstantsProvider.checkSymbols(contactField)) {
+                return false;
             }
         }
         return true;

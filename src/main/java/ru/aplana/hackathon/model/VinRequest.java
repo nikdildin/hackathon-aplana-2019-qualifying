@@ -1,11 +1,15 @@
 package ru.aplana.hackathon.model;
 
-import lombok.Data;
+import lombok.*;
 import ru.aplana.hackathon.validation.WmiConstraint;
 
 import javax.validation.constraints.Min;
 
 @Data
+@ToString
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class VinRequest {
 
     @WmiConstraint
